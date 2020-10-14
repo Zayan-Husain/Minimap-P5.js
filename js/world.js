@@ -102,7 +102,7 @@ class world {
     }
 
     this.camx = camera.position.x;
-    this.camy = camera.position.x;
+    this.camy = camera.position.y;
   } //end update
 
   render() {

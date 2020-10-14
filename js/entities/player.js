@@ -31,6 +31,8 @@ class player extends yentity
     if (keyDown('w')) {
         t.move_by(0, -t.speed);
     }
+    camera.position.x = t.x;
+    camera.position.y = t.y;
   }//end move
   
   
