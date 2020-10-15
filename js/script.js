@@ -1,4 +1,5 @@
-var yscreen = { w: 640, h: 480 };
+var yscreen = { w: document.documentElement.clientWidth, h: document.documentElement.clientHeight };
+
 //init engine
 var yeng = new yengine();
 
@@ -6,7 +7,7 @@ var tste, tste2;
 var current_world;
 
 function setup() {
-	createCanvas(yscreen.w, yscreen.h);
+	var canvas = createCanvas(yscreen.w, yscreen.h);
 	frameRate(60);
 
 
@@ -29,4 +30,7 @@ function draw() {
 	current_world.render();
 
 
+}
+function windowResized() {
+	resizeCanvas(document.documentElement.clientWidth, document.documentElement.clientHeight);
 }
